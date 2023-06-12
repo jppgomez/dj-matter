@@ -1,0 +1,1932 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_00a6k"]
+
+[resource]
+script = ExtResource("1_00a6k")
+titles = {
+"doctor": "57",
+"find_battery": "123",
+"find_battery2": "146",
+"find_file": "91",
+"find_pills": "11",
+"find_wallet": "107"
+}
+character_names = PackedStringArray("Elijah", "You", "Colten", "God")
+first_title = "11"
+lines = {
+"10": {
+"next_id": "11",
+"text": "find_pills",
+"type": "title"
+},
+"100": {
+"next_id": "102",
+"next_id_after": "102",
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": "response"
+},
+"102": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "103",
+"type": "mutation"
+},
+"103": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "stop",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "104",
+"type": "mutation"
+},
+"104": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"106": {
+"next_id": "107",
+"text": "find_wallet",
+"type": "title"
+},
+"107": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "start",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "108",
+"type": "mutation"
+},
+"108": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "items_found"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "109",
+"type": "mutation"
+},
+"109": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "110",
+"text": "You found someone's wallet!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You found someone's wallet!",
+"type": "dialogue"
+},
+"11": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "start",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "12",
+"type": "mutation"
+},
+"110": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "111",
+"text": "Do you want to keep it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you want to keep it?",
+"type": "dialogue"
+},
+"111": {
+"next_id": "112",
+"next_id_after": "118",
+"responses": PackedStringArray("111", "116"),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": "response"
+},
+"112": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "114",
+"parent_id": "111",
+"text": "Added to Inventory!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory!",
+"type": "dialogue"
+},
+"114": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": -1
+}])])
+}])
+},
+"next_id": "115",
+"parent_id": "111",
+"type": "mutation"
+},
+"115": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "disappear",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/Hospital/Wallet"
+}])])
+}])
+},
+"next_id": "118",
+"parent_id": "111",
+"type": "mutation"
+},
+"116": {
+"next_id": "118",
+"next_id_after": "118",
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": "response"
+},
+"118": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "119",
+"type": "mutation"
+},
+"119": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "stop",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "120",
+"type": "mutation"
+},
+"12": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "npc_interactions"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "13",
+"type": "mutation"
+},
+"120": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"122": {
+"next_id": "123",
+"text": "find_battery",
+"type": "title"
+},
+"123": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "start",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "124",
+"type": "mutation"
+},
+"124": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "items_found"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "125",
+"type": "mutation"
+},
+"125": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "126",
+"text": "You found a full battery!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You found a full battery!",
+"type": "dialogue"
+},
+"126": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_status"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "138",
+"next_id": "127",
+"next_id_after": "142",
+"type": "condition"
+},
+"127": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "128",
+"parent_id": "126",
+"text": "Do you want to keep it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you want to keep it?",
+"type": "dialogue"
+},
+"128": {
+"next_id": "129",
+"next_id_after": "142",
+"parent_id": "126",
+"responses": PackedStringArray("128", "137"),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": "response"
+},
+"129": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "items_collected"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "130",
+"parent_id": "128",
+"type": "mutation"
+},
+"13": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "items_found"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "14",
+"type": "mutation"
+},
+"130": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_usage"
+}, {
+"type": "comparison",
+"value": "<"
+}, {
+"type": "number",
+"value": 80
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "132",
+"next_id": "131",
+"next_id_after": "134",
+"parent_id": "128",
+"type": "condition"
+},
+"131": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_usage"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 20
+}])
+},
+"next_id": "134",
+"parent_id": "130",
+"type": "mutation"
+},
+"132": {
+"next_conditional_id": "134",
+"next_id": "133",
+"next_id_after": "134",
+"parent_id": "128",
+"type": "condition"
+},
+"133": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_usage"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 100
+}])
+},
+"next_id": "134",
+"parent_id": "132",
+"type": "mutation"
+},
+"134": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "disappear",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/Hospital/Battery"
+}])])
+}])
+},
+"next_id": "135",
+"parent_id": "128",
+"type": "mutation"
+},
+"135": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "136",
+"parent_id": "128",
+"text": "20% added to your flashlight!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "20% added to your flashlight!",
+"type": "dialogue"
+},
+"136": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "142",
+"parent_id": "128",
+"type": "mutation"
+},
+"137": {
+"next_id": "142",
+"next_id_after": "142",
+"parent_id": "126",
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": "response"
+},
+"138": {
+"next_conditional_id": "142",
+"next_id": "139",
+"next_id_after": "142",
+"type": "condition"
+},
+"139": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "141",
+"parent_id": "138",
+"text": "You need a tool for the battery to work...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You need a tool for the battery to work...",
+"type": "dialogue"
+},
+"14": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "15",
+"text": "T-... Where??? Argg-...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "T-... Where??? Argg-...",
+"type": "dialogue"
+},
+"141": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "142",
+"parent_id": "138",
+"type": "mutation"
+},
+"142": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "stop",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "143",
+"type": "mutation"
+},
+"143": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"145": {
+"next_id": "146",
+"text": "find_battery2",
+"type": "title"
+},
+"146": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "start",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "147",
+"type": "mutation"
+},
+"147": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "items_found"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "148",
+"type": "mutation"
+},
+"148": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "149",
+"text": "You found a full battery!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You found a full battery!",
+"type": "dialogue"
+},
+"149": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_status"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "161",
+"next_id": "150",
+"next_id_after": "165",
+"type": "condition"
+},
+"15": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "16",
+"text": "Hello?...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hello?...",
+"type": "dialogue"
+},
+"150": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "151",
+"parent_id": "149",
+"text": "Do you want to keep it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you want to keep it?",
+"type": "dialogue"
+},
+"151": {
+"next_id": "152",
+"next_id_after": "165",
+"parent_id": "149",
+"responses": PackedStringArray("151", "160"),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": "response"
+},
+"152": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "items_collected"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "153",
+"parent_id": "151",
+"type": "mutation"
+},
+"153": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_usage"
+}, {
+"type": "comparison",
+"value": "<"
+}, {
+"type": "number",
+"value": 80
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "155",
+"next_id": "154",
+"next_id_after": "157",
+"parent_id": "151",
+"type": "condition"
+},
+"154": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_usage"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 20
+}])
+},
+"next_id": "157",
+"parent_id": "153",
+"type": "mutation"
+},
+"155": {
+"next_conditional_id": "157",
+"next_id": "156",
+"next_id_after": "157",
+"parent_id": "151",
+"type": "condition"
+},
+"156": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_usage"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 100
+}])
+},
+"next_id": "157",
+"parent_id": "155",
+"type": "mutation"
+},
+"157": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "disappear",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/Hospital/Battery2"
+}])])
+}])
+},
+"next_id": "158",
+"parent_id": "151",
+"type": "mutation"
+},
+"158": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "159",
+"parent_id": "151",
+"text": "20% added to your flashlight!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "20% added to your flashlight!",
+"type": "dialogue"
+},
+"159": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "165",
+"parent_id": "151",
+"type": "mutation"
+},
+"16": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "17",
+"text": "AAA...who are you???",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "AAA...who are you???",
+"type": "dialogue"
+},
+"160": {
+"next_id": "165",
+"next_id_after": "165",
+"parent_id": "149",
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": "response"
+},
+"161": {
+"next_conditional_id": "165",
+"next_id": "162",
+"next_id_after": "165",
+"type": "condition"
+},
+"162": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "164",
+"parent_id": "161",
+"text": "You need a tool for the battery to work...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You need a tool for the battery to work...",
+"type": "dialogue"
+},
+"164": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "165",
+"parent_id": "161",
+"type": "mutation"
+},
+"165": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "stop",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "166",
+"type": "mutation"
+},
+"166": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"17": {
+"character": "You",
+"next_id": "17.2",
+"next_id_after": "52",
+"responses": PackedStringArray("17", "31"),
+"text": "I'm... I don't know...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm... I don't know...",
+"type": "response"
+},
+"17.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "18",
+"next_id_after": "52",
+"text": "I'm... I don't know...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm... I don't know...",
+"type": "dialogue"
+},
+"18": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "19",
+"parent_id": "17",
+"text": "Humm... Maybe I can help you with that... hehehe",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Humm... Maybe I can help you with that... hehehe",
+"type": "dialogue"
+},
+"19": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "20",
+"parent_id": "17",
+"text": "Wh-...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wh-...",
+"type": "dialogue"
+},
+"20": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "21",
+"parent_id": "17",
+"text": "Here!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Here!",
+"type": "dialogue"
+},
+"21": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "22",
+"parent_id": "17",
+"text": "Take 2 pills, no more no less...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Take 2 pills, no more no less...",
+"type": "dialogue"
+},
+"22": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "23",
+"parent_id": "17",
+"text": "If you take 1 you haven't taken enough.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "If you take 1 you haven't taken enough.",
+"type": "dialogue"
+},
+"23": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "24",
+"parent_id": "17",
+"text": "If you take 3 you have 1 too many.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "If you take 3 you have 1 too many.",
+"type": "dialogue"
+},
+"24": {
+"next_id": "25",
+"next_id_after": "52",
+"parent_id": "17",
+"responses": PackedStringArray("24", "27"),
+"text": "Accept",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Accept",
+"type": "response"
+},
+"25": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "door_lock"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "26",
+"parent_id": "24",
+"type": "mutation"
+},
+"26": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "SceneTransition"
+}, {
+"type": "dot"
+}, {
+"function": "change_scene",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "res://levels/city/city.tscn"
+}])])
+}])
+},
+"next_id": "52",
+"parent_id": "24",
+"type": "mutation"
+},
+"27": {
+"next_id": "28",
+"next_id_after": "52",
+"parent_id": "17",
+"text": "Deny",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Deny",
+"type": "response"
+},
+"28": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "29",
+"parent_id": "27",
+"text": "Sorry, I don't accept things given by strangers.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sorry, I don't accept things given by strangers.",
+"type": "dialogue"
+},
+"29": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "30",
+"parent_id": "27",
+"text": "You are the stranger here!!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You are the stranger here!!",
+"type": "dialogue"
+},
+"30": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "52",
+"parent_id": "27",
+"text": "GET OUT OF MY HOUSE!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "GET OUT OF MY HOUSE!",
+"type": "dialogue"
+},
+"31": {
+"character": "You",
+"next_id": "31.2",
+"next_id_after": "52",
+"text": "I... I'm Pedro!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I... I'm Pedro!",
+"type": "response"
+},
+"31.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "32",
+"next_id_after": "52",
+"text": "I... I'm Pedro!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I... I'm Pedro!",
+"type": "dialogue"
+},
+"32": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "33",
+"parent_id": "31",
+"text": "NO! I'M PEDRO!!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "NO! I'M PEDRO!!",
+"type": "dialogue"
+},
+"33": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "34",
+"parent_id": "31",
+"text": "WHO ARE YOU??",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "WHO ARE YOU??",
+"type": "dialogue"
+},
+"34": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "35",
+"parent_id": "31",
+"text": "I DON'T KNOW!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I DON'T KNOW!",
+"type": "dialogue"
+},
+"35": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "36",
+"parent_id": "31",
+"text": "Hehe...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hehe...",
+"type": "dialogue"
+},
+"36": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "37",
+"parent_id": "31",
+"text": "I'm not Pedro, but neither are you...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm not Pedro, but neither are you...",
+"type": "dialogue"
+},
+"37": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "38",
+"parent_id": "31",
+"text": "I see...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I see...",
+"type": "dialogue"
+},
+"38": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "39",
+"parent_id": "31",
+"text": "I don't know who I am...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I don't know who I am...",
+"type": "dialogue"
+},
+"39": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "40",
+"parent_id": "31",
+"text": "Hehe... Neither do I, but I have something that you are going to love...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hehe... Neither do I, but I have something that you are going to love...",
+"type": "dialogue"
+},
+"40": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "41",
+"parent_id": "31",
+"text": "I love it!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I love it!",
+"type": "dialogue"
+},
+"41": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "42",
+"parent_id": "31",
+"text": "I-...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I-...",
+"type": "dialogue"
+},
+"42": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "43",
+"parent_id": "31",
+"text": "Here!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Here!",
+"type": "dialogue"
+},
+"43": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "44",
+"parent_id": "31",
+"text": "Take 2 pills, no more no less...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Take 2 pills, no more no less...",
+"type": "dialogue"
+},
+"44": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "45",
+"parent_id": "31",
+"text": "If you take 1 you haven't taken enough.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "If you take 1 you haven't taken enough.",
+"type": "dialogue"
+},
+"45": {
+"character": "Elijah",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "46",
+"parent_id": "31",
+"text": "If you take 3 you have 1 too many.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "If you take 3 you have 1 too many.",
+"type": "dialogue"
+},
+"46": {
+"next_id": "47",
+"next_id_after": "52",
+"parent_id": "31",
+"responses": PackedStringArray("46", "49"),
+"text": "Accept",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Accept",
+"type": "response"
+},
+"47": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "door_lock"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "48",
+"parent_id": "46",
+"type": "mutation"
+},
+"48": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "SceneTransition"
+}, {
+"type": "dot"
+}, {
+"function": "change_scene",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "res://levels/city/city.tscn"
+}])])
+}])
+},
+"next_id": "52",
+"parent_id": "46",
+"type": "mutation"
+},
+"49": {
+"next_id": "50",
+"next_id_after": "52",
+"parent_id": "31",
+"text": "Deny",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Deny",
+"type": "response"
+},
+"50": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "52",
+"parent_id": "49",
+"text": "NO! Sorry...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "NO! Sorry...",
+"type": "dialogue"
+},
+"52": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "53",
+"type": "mutation"
+},
+"53": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "stop",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "54",
+"type": "mutation"
+},
+"54": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"56": {
+"next_id": "57",
+"text": "doctor",
+"type": "title"
+},
+"57": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "start",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "58",
+"type": "mutation"
+},
+"58": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "npc_interactions"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "59",
+"type": "mutation"
+},
+"59": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "60",
+"text": "Don't you see I'm busy?...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Don't you see I'm busy?...",
+"type": "dialogue"
+},
+"60": {
+"character": "You",
+"next_id": "60.2",
+"next_id_after": "85",
+"responses": PackedStringArray("60", "71"),
+"text": "I didn't even said anything...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I didn't even said anything...",
+"type": "response"
+},
+"60.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "61",
+"next_id_after": "85",
+"text": "I didn't even said anything...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I didn't even said anything...",
+"type": "dialogue"
+},
+"61": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "62",
+"parent_id": "60",
+"text": "You don't have to...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You don't have to...",
+"type": "dialogue"
+},
+"62": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "63",
+"parent_id": "60",
+"text": "Your presence is too present.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your presence is too present.",
+"type": "dialogue"
+},
+"63": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "64",
+"parent_id": "60",
+"text": "Can you just tell where are we?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Can you just tell where are we?",
+"type": "dialogue"
+},
+"64": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "65",
+"parent_id": "60",
+"text": "That would be too easy, don't you think?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That would be too easy, don't you think?",
+"type": "dialogue"
+},
+"65": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "66",
+"parent_id": "60",
+"text": "You could help me...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You could help me...",
+"type": "dialogue"
+},
+"66": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "67",
+"parent_id": "60",
+"text": "I don't really want to. They are always watching...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I don't really want to. They are always watching...",
+"type": "dialogue"
+},
+"67": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "68",
+"parent_id": "60",
+"text": "You never know what's going to happen and I kinda like it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You never know what's going to happen and I kinda like it.",
+"type": "dialogue"
+},
+"68": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "69",
+"parent_id": "60",
+"text": "So... The question is not where?...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So... The question is not where?...",
+"type": "dialogue"
+},
+"69": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "70",
+"parent_id": "60",
+"text": "Who said there's even a question? AHAHAH",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Who said there's even a question? AHAHAH",
+"type": "dialogue"
+},
+"70": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "disappear",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/Hospital/NPC3"
+}])])
+}])
+},
+"next_id": "85",
+"parent_id": "60",
+"type": "mutation"
+},
+"71": {
+"character": "You",
+"next_id": "71.2",
+"next_id_after": "85",
+"text": "I just... Where are we?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I just... Where are we?",
+"type": "response"
+},
+"71.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "72",
+"next_id_after": "85",
+"text": "I just... Where are we?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I just... Where are we?",
+"type": "dialogue"
+},
+"72": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "73",
+"parent_id": "71",
+"text": "That's the wrong question.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That's the wrong question.",
+"type": "dialogue"
+},
+"73": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "74",
+"parent_id": "71",
+"text": "Are you even trying?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Are you even trying?",
+"type": "dialogue"
+},
+"74": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "75",
+"parent_id": "71",
+"text": "It looks like a hospital but...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It looks like a hospital but...",
+"type": "dialogue"
+},
+"75": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "76",
+"parent_id": "71",
+"text": "Oh gosh... Stop!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh gosh... Stop!",
+"type": "dialogue"
+},
+"76": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "77",
+"parent_id": "71",
+"text": "Wrong mind set...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wrong mind set...",
+"type": "dialogue"
+},
+"77": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "78",
+"parent_id": "71",
+"text": "TRY AGAIN!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "TRY AGAIN!",
+"type": "dialogue"
+},
+"78": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "79",
+"parent_id": "71",
+"text": "I DON'T KNOW!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I DON'T KNOW!",
+"type": "dialogue"
+},
+"79": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "80",
+"parent_id": "71",
+"text": "That's too bad ahah...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That's too bad ahah...",
+"type": "dialogue"
+},
+"80": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "81",
+"parent_id": "71",
+"text": "You could help me...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You could help me...",
+"type": "dialogue"
+},
+"81": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "82",
+"parent_id": "71",
+"text": "I could... or not...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I could... or not...",
+"type": "dialogue"
+},
+"82": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "83",
+"parent_id": "71",
+"text": "Maybe I don't want to... or maybe I want to...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Maybe I don't want to... or maybe I want to...",
+"type": "dialogue"
+},
+"83": {
+"character": "Colten",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "84",
+"parent_id": "71",
+"text": "Doesn't Matter...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Doesn't Matter...",
+"type": "dialogue"
+},
+"84": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "disappear",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/Hospital/NPC3"
+}])])
+}])
+},
+"next_id": "85",
+"parent_id": "71",
+"type": "mutation"
+},
+"85": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "86",
+"type": "mutation"
+},
+"86": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "stop",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "87",
+"type": "mutation"
+},
+"87": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"90": {
+"next_id": "91",
+"text": "find_file",
+"type": "title"
+},
+"91": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "start",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "92",
+"type": "mutation"
+},
+"92": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "items_found"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "93",
+"type": "mutation"
+},
+"93": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "94",
+"text": "You found a medical file about a patient!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You found a medical file about a patient!",
+"type": "dialogue"
+},
+"94": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "95",
+"text": "Do you want to keep it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you want to keep it?",
+"type": "dialogue"
+},
+"95": {
+"next_id": "96",
+"next_id_after": "102",
+"responses": PackedStringArray("95", "100"),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": "response"
+},
+"96": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "98",
+"parent_id": "95",
+"text": "Added to Inventory!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory!",
+"type": "dialogue"
+},
+"98": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": -1
+}])])
+}])
+},
+"next_id": "99",
+"parent_id": "95",
+"type": "mutation"
+},
+"99": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "disappear",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/Hospital/File"
+}])])
+}])
+},
+"next_id": "102",
+"parent_id": "95",
+"type": "mutation"
+}
+}
+metadata/dialogue_manager_version = "2.15.3"

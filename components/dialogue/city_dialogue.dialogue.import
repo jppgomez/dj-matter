@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bi6usyd5tkubf"
+path="res://.godot/imported/city_dialogue.dialogue-71cd241fe49bee93ef6e8ccc0242f9f8.tres"
+
+[deps]
+
+source_file="res://components/dialogue/city_dialogue.dialogue"
+dest_files=["res://.godot/imported/city_dialogue.dialogue-71cd241fe49bee93ef6e8ccc0242f9f8.tres"]
+
+[params]
+

@@ -1,0 +1,3246 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_nxnjk"]
+
+[resource]
+script = ExtResource("1_nxnjk")
+titles = {
+"find_battery": "201",
+"find_battery2": "224",
+"find_bottle": "154",
+"find_flashlight": "247",
+"find_kid": "25",
+"find_lady": "55",
+"find_tac": "9",
+"find_teddy": "177",
+"find_tic": "2",
+"find_toe": "17"
+}
+character_names = PackedStringArray("Tic", "Tac", "Toe", "Ted", "You", "Dorothy", "God")
+first_title = "2"
+lines = {
+"1": {
+"next_id": "2",
+"text": "find_tic",
+"type": "title"
+},
+"10": {
+"character": "Tac",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "11",
+"text": "Hum-...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hum-...",
+"type": "dialogue"
+},
+"100": {
+"character": "You",
+"next_id": "100.2",
+"next_id_after": "154",
+"parent_id": "93",
+"responses": PackedStringArray("100", "126"),
+"text": "Not really...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Not really...",
+"type": "response"
+},
+"100.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "101",
+"next_id_after": "154",
+"text": "Not really...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Not really...",
+"type": "dialogue"
+},
+"101": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "102",
+"parent_id": "100",
+"text": "Hum...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hum...",
+"type": "dialogue"
+},
+"102": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "103",
+"parent_id": "100",
+"text": "It's the one on the top.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's the one on the top.",
+"type": "dialogue"
+},
+"103": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "104",
+"parent_id": "100",
+"text": "Do you need the keys?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you need the keys?",
+"type": "dialogue"
+},
+"104": {
+"character": "You",
+"next_id": "104.2",
+"next_id_after": "154",
+"parent_id": "100",
+"responses": PackedStringArray("104", "122"),
+"text": "Yes, thank you!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes, thank you!",
+"type": "response"
+},
+"104.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "105",
+"next_id_after": "154",
+"text": "Yes, thank you!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes, thank you!",
+"type": "dialogue"
+},
+"105": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "inventory_full"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "116",
+"next_id": "106",
+"next_id_after": "118",
+"parent_id": "104",
+"type": "condition"
+},
+"106": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "107",
+"parent_id": "105",
+"text": "Your inventory is full, select item to trade:",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your inventory is full, select item to trade:",
+"type": "dialogue"
+},
+"107": {
+"next_id": "108",
+"next_id_after": "118",
+"parent_id": "105",
+"responses": PackedStringArray("107", "110", "113"),
+"text": "Item 1",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 1",
+"type": "response"
+},
+"108": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 0
+}])])
+}])
+},
+"next_id": "109",
+"parent_id": "107",
+"type": "mutation"
+},
+"109": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "118",
+"parent_id": "107",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"11": {
+"character": "Tac",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "12",
+"text": "Tic said it doesn't Matter...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Tic said it doesn't Matter...",
+"type": "dialogue"
+},
+"110": {
+"next_id": "111",
+"next_id_after": "118",
+"parent_id": "105",
+"text": "Item 2",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 2",
+"type": "response"
+},
+"111": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 1
+}])])
+}])
+},
+"next_id": "112",
+"parent_id": "110",
+"type": "mutation"
+},
+"112": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "118",
+"parent_id": "110",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"113": {
+"next_id": "114",
+"next_id_after": "118",
+"parent_id": "105",
+"text": "Item 3",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 3",
+"type": "response"
+},
+"114": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 2
+}])])
+}])
+},
+"next_id": "115",
+"parent_id": "113",
+"type": "mutation"
+},
+"115": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "118",
+"parent_id": "113",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"116": {
+"next_conditional_id": "118",
+"next_id": "117",
+"next_id_after": "118",
+"parent_id": "104",
+"type": "condition"
+},
+"117": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": -1
+}])])
+}])
+},
+"next_id": "118",
+"parent_id": "116",
+"type": "mutation"
+},
+"118": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "key_state"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "119",
+"parent_id": "104",
+"type": "mutation"
+},
+"119": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"function": "unlock_door",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "120",
+"parent_id": "104",
+"type": "mutation"
+},
+"12": {
+"character": "Tac",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "13",
+"text": "But if there's Matter, does it mean it's real or not?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "But if there's Matter, does it mean it's real or not?",
+"type": "dialogue"
+},
+"120": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "121",
+"parent_id": "104",
+"type": "mutation"
+},
+"121": {
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "104",
+"type": "goto"
+},
+"122": {
+"character": "You",
+"next_id": "122.2",
+"next_id_after": "154",
+"parent_id": "100",
+"text": "No, I don't need them.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, I don't need them.",
+"type": "response"
+},
+"122.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "123",
+"next_id_after": "154",
+"text": "No, I don't need them.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, I don't need them.",
+"type": "dialogue"
+},
+"123": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"function": "unlock_door",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "124",
+"parent_id": "122",
+"type": "mutation"
+},
+"124": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "125",
+"parent_id": "122",
+"type": "mutation"
+},
+"125": {
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "122",
+"type": "goto"
+},
+"126": {
+"character": "You",
+"next_id": "126.2",
+"next_id_after": "154",
+"parent_id": "93",
+"text": "Of course I do...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Of course I do...",
+"type": "response"
+},
+"126.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "127",
+"next_id_after": "154",
+"text": "Of course I do...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Of course I do...",
+"type": "dialogue"
+},
+"127": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "128",
+"parent_id": "126",
+"text": "Hum...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hum...",
+"type": "dialogue"
+},
+"128": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "129",
+"parent_id": "126",
+"text": "It's the one on the top.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's the one on the top.",
+"type": "dialogue"
+},
+"129": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "130",
+"parent_id": "126",
+"text": "Do you need the keys?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you need the keys?",
+"type": "dialogue"
+},
+"13": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "14",
+"type": "mutation"
+},
+"130": {
+"character": "You",
+"next_id": "130.2",
+"next_id_after": "154",
+"parent_id": "126",
+"responses": PackedStringArray("130", "148"),
+"text": "Yes, thank you!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes, thank you!",
+"type": "response"
+},
+"130.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "131",
+"next_id_after": "154",
+"text": "Yes, thank you!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes, thank you!",
+"type": "dialogue"
+},
+"131": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "inventory_full"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "142",
+"next_id": "132",
+"next_id_after": "144",
+"parent_id": "130",
+"type": "condition"
+},
+"132": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "133",
+"parent_id": "131",
+"text": "Your inventory is full, select item to trade:",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your inventory is full, select item to trade:",
+"type": "dialogue"
+},
+"133": {
+"next_id": "134",
+"next_id_after": "144",
+"parent_id": "131",
+"responses": PackedStringArray("133", "136", "139"),
+"text": "Item 1",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 1",
+"type": "response"
+},
+"134": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 0
+}])])
+}])
+},
+"next_id": "135",
+"parent_id": "133",
+"type": "mutation"
+},
+"135": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "144",
+"parent_id": "133",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"136": {
+"next_id": "137",
+"next_id_after": "144",
+"parent_id": "131",
+"text": "Item 2",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 2",
+"type": "response"
+},
+"137": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 1
+}])])
+}])
+},
+"next_id": "138",
+"parent_id": "136",
+"type": "mutation"
+},
+"138": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "144",
+"parent_id": "136",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"139": {
+"next_id": "140",
+"next_id_after": "144",
+"parent_id": "131",
+"text": "Item 3",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 3",
+"type": "response"
+},
+"14": {
+"is_snippet": false,
+"next_id": "end!",
+"type": "goto"
+},
+"140": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 2
+}])])
+}])
+},
+"next_id": "141",
+"parent_id": "139",
+"type": "mutation"
+},
+"141": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "144",
+"parent_id": "139",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"142": {
+"next_conditional_id": "144",
+"next_id": "143",
+"next_id_after": "144",
+"parent_id": "130",
+"type": "condition"
+},
+"143": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": -1
+}])])
+}])
+},
+"next_id": "144",
+"parent_id": "142",
+"type": "mutation"
+},
+"144": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "key_state"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "145",
+"parent_id": "130",
+"type": "mutation"
+},
+"145": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"function": "unlock_door",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "146",
+"parent_id": "130",
+"type": "mutation"
+},
+"146": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "147",
+"parent_id": "130",
+"type": "mutation"
+},
+"147": {
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "130",
+"type": "goto"
+},
+"148": {
+"character": "You",
+"next_id": "148.2",
+"next_id_after": "154",
+"parent_id": "126",
+"text": "No, I don't need them.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, I don't need them.",
+"type": "response"
+},
+"148.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "149",
+"next_id_after": "154",
+"text": "No, I don't need them.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, I don't need them.",
+"type": "dialogue"
+},
+"149": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"function": "unlock_door",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "150",
+"parent_id": "148",
+"type": "mutation"
+},
+"150": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "151",
+"parent_id": "148",
+"type": "mutation"
+},
+"151": {
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "148",
+"type": "goto"
+},
+"153": {
+"next_id": "154",
+"text": "find_bottle",
+"type": "title"
+},
+"154": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "155",
+"text": "You found a broken bottle!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You found a broken bottle!",
+"type": "dialogue"
+},
+"155": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "156",
+"text": "Do you want to keep it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you want to keep it?",
+"type": "dialogue"
+},
+"156": {
+"next_id": "157",
+"next_id_after": "173",
+"responses": PackedStringArray("156", "171"),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": "response"
+},
+"157": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "inventory_full"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "168",
+"next_id": "158",
+"next_id_after": "170",
+"parent_id": "156",
+"type": "condition"
+},
+"158": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "159",
+"parent_id": "157",
+"text": "Your inventory is full, select item to trade:",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your inventory is full, select item to trade:",
+"type": "dialogue"
+},
+"159": {
+"next_id": "160",
+"next_id_after": "170",
+"parent_id": "157",
+"responses": PackedStringArray("159", "162", "165"),
+"text": "Item 1",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 1",
+"type": "response"
+},
+"16": {
+"next_id": "17",
+"text": "find_toe",
+"type": "title"
+},
+"160": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 0
+}])])
+}])
+},
+"next_id": "161",
+"parent_id": "159",
+"type": "mutation"
+},
+"161": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "170",
+"parent_id": "159",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"162": {
+"next_id": "163",
+"next_id_after": "170",
+"parent_id": "157",
+"text": "Item 2",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 2",
+"type": "response"
+},
+"163": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 1
+}])])
+}])
+},
+"next_id": "164",
+"parent_id": "162",
+"type": "mutation"
+},
+"164": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "170",
+"parent_id": "162",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"165": {
+"next_id": "166",
+"next_id_after": "170",
+"parent_id": "157",
+"text": "Item 3",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 3",
+"type": "response"
+},
+"166": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 2
+}])])
+}])
+},
+"next_id": "167",
+"parent_id": "165",
+"type": "mutation"
+},
+"167": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "170",
+"parent_id": "165",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"168": {
+"next_conditional_id": "170",
+"next_id": "169",
+"next_id_after": "170",
+"parent_id": "156",
+"type": "condition"
+},
+"169": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": -1
+}])])
+}])
+},
+"next_id": "170",
+"parent_id": "168",
+"type": "mutation"
+},
+"17": {
+"character": "Toe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "18",
+"text": "Where could be everywhere or nowhere...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Where could be everywhere or nowhere...",
+"type": "dialogue"
+},
+"170": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "disappear",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/City/Bottle"
+}])])
+}])
+},
+"next_id": "173",
+"parent_id": "156",
+"type": "mutation"
+},
+"171": {
+"next_id": "173",
+"next_id_after": "173",
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": "response"
+},
+"173": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "174",
+"type": "mutation"
+},
+"174": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"176": {
+"next_id": "177",
+"text": "find_teddy",
+"type": "title"
+},
+"177": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "178",
+"text": "You found a kid's Teddy Bear!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You found a kid's Teddy Bear!",
+"type": "dialogue"
+},
+"178": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "179",
+"text": "Do you want to keep it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you want to keep it?",
+"type": "dialogue"
+},
+"179": {
+"next_id": "180",
+"next_id_after": "196",
+"responses": PackedStringArray("179", "194"),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": "response"
+},
+"18": {
+"character": "Toe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "19",
+"text": "But me existing could be a lie?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "But me existing could be a lie?",
+"type": "dialogue"
+},
+"180": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "inventory_full"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "191",
+"next_id": "181",
+"next_id_after": "193",
+"parent_id": "179",
+"type": "condition"
+},
+"181": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "182",
+"parent_id": "180",
+"text": "Your inventory is full, select item to trade:",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your inventory is full, select item to trade:",
+"type": "dialogue"
+},
+"182": {
+"next_id": "183",
+"next_id_after": "193",
+"parent_id": "180",
+"responses": PackedStringArray("182", "185", "188"),
+"text": "Item 1",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 1",
+"type": "response"
+},
+"183": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 0
+}])])
+}])
+},
+"next_id": "184",
+"parent_id": "182",
+"type": "mutation"
+},
+"184": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "193",
+"parent_id": "182",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"185": {
+"next_id": "186",
+"next_id_after": "193",
+"parent_id": "180",
+"text": "Item 2",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 2",
+"type": "response"
+},
+"186": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 1
+}])])
+}])
+},
+"next_id": "187",
+"parent_id": "185",
+"type": "mutation"
+},
+"187": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "193",
+"parent_id": "185",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"188": {
+"next_id": "189",
+"next_id_after": "193",
+"parent_id": "180",
+"text": "Item 3",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 3",
+"type": "response"
+},
+"189": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 2
+}])])
+}])
+},
+"next_id": "190",
+"parent_id": "188",
+"type": "mutation"
+},
+"19": {
+"character": "Toe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "20",
+"text": "Does it mean that even if I think I could not exist?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Does it mean that even if I think I could not exist?",
+"type": "dialogue"
+},
+"190": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "193",
+"parent_id": "188",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"191": {
+"next_conditional_id": "193",
+"next_id": "192",
+"next_id_after": "193",
+"parent_id": "179",
+"type": "condition"
+},
+"192": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": -1
+}])])
+}])
+},
+"next_id": "193",
+"parent_id": "191",
+"type": "mutation"
+},
+"193": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "disappear",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/City/Teddy"
+}])])
+}])
+},
+"next_id": "196",
+"parent_id": "179",
+"type": "mutation"
+},
+"194": {
+"next_id": "196",
+"next_id_after": "196",
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": "response"
+},
+"196": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "197",
+"type": "mutation"
+},
+"197": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"2": {
+"character": "Tic",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "3",
+"text": "Tic Tac... Tic Tac...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Tic Tac... Tic Tac...",
+"type": "dialogue"
+},
+"20": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "21",
+"type": "mutation"
+},
+"200": {
+"next_id": "201",
+"text": "find_battery",
+"type": "title"
+},
+"201": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "start",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "202",
+"type": "mutation"
+},
+"202": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "items_found"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "203",
+"type": "mutation"
+},
+"203": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "204",
+"text": "You found a full battery!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You found a full battery!",
+"type": "dialogue"
+},
+"204": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_status"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "216",
+"next_id": "205",
+"next_id_after": "220",
+"type": "condition"
+},
+"205": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "206",
+"parent_id": "204",
+"text": "Do you want to keep it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you want to keep it?",
+"type": "dialogue"
+},
+"206": {
+"next_id": "207",
+"next_id_after": "220",
+"parent_id": "204",
+"responses": PackedStringArray("206", "215"),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": "response"
+},
+"207": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "items_collected"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "208",
+"parent_id": "206",
+"type": "mutation"
+},
+"208": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_usage"
+}, {
+"type": "comparison",
+"value": "<"
+}, {
+"type": "number",
+"value": 80
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "210",
+"next_id": "209",
+"next_id_after": "212",
+"parent_id": "206",
+"type": "condition"
+},
+"209": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_usage"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 20
+}])
+},
+"next_id": "212",
+"parent_id": "208",
+"type": "mutation"
+},
+"21": {
+"is_snippet": false,
+"next_id": "end!",
+"type": "goto"
+},
+"210": {
+"next_conditional_id": "212",
+"next_id": "211",
+"next_id_after": "212",
+"parent_id": "206",
+"type": "condition"
+},
+"211": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_usage"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 100
+}])
+},
+"next_id": "212",
+"parent_id": "210",
+"type": "mutation"
+},
+"212": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "disappear",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/Hospital/Battery"
+}])])
+}])
+},
+"next_id": "213",
+"parent_id": "206",
+"type": "mutation"
+},
+"213": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "214",
+"parent_id": "206",
+"text": "20% added to your flashlight!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "20% added to your flashlight!",
+"type": "dialogue"
+},
+"214": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "220",
+"parent_id": "206",
+"type": "mutation"
+},
+"215": {
+"next_id": "220",
+"next_id_after": "220",
+"parent_id": "204",
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": "response"
+},
+"216": {
+"next_conditional_id": "220",
+"next_id": "217",
+"next_id_after": "220",
+"type": "condition"
+},
+"217": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "219",
+"parent_id": "216",
+"text": "You need a tool for the battery to work...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You need a tool for the battery to work...",
+"type": "dialogue"
+},
+"219": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "220",
+"parent_id": "216",
+"type": "mutation"
+},
+"220": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "stop",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "221",
+"type": "mutation"
+},
+"221": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"223": {
+"next_id": "224",
+"text": "find_battery2",
+"type": "title"
+},
+"224": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "start",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "225",
+"type": "mutation"
+},
+"225": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "items_found"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "226",
+"type": "mutation"
+},
+"226": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "227",
+"text": "You found a full battery!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You found a full battery!",
+"type": "dialogue"
+},
+"227": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_status"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "239",
+"next_id": "228",
+"next_id_after": "243",
+"type": "condition"
+},
+"228": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "229",
+"parent_id": "227",
+"text": "Do you want to keep it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you want to keep it?",
+"type": "dialogue"
+},
+"229": {
+"next_id": "230",
+"next_id_after": "243",
+"parent_id": "227",
+"responses": PackedStringArray("229", "238"),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": "response"
+},
+"230": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GQMVariables"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "items_collected"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "231",
+"parent_id": "229",
+"type": "mutation"
+},
+"231": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_usage"
+}, {
+"type": "comparison",
+"value": "<"
+}, {
+"type": "number",
+"value": 80
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "233",
+"next_id": "232",
+"next_id_after": "235",
+"parent_id": "229",
+"type": "condition"
+},
+"232": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_usage"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 20
+}])
+},
+"next_id": "235",
+"parent_id": "231",
+"type": "mutation"
+},
+"233": {
+"next_conditional_id": "235",
+"next_id": "234",
+"next_id_after": "235",
+"parent_id": "229",
+"type": "condition"
+},
+"234": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tool_usage"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 100
+}])
+},
+"next_id": "235",
+"parent_id": "233",
+"type": "mutation"
+},
+"235": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "disappear",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/Hospital/Battery2"
+}])])
+}])
+},
+"next_id": "236",
+"parent_id": "229",
+"type": "mutation"
+},
+"236": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "237",
+"parent_id": "229",
+"text": "20% added to your flashlight!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "20% added to your flashlight!",
+"type": "dialogue"
+},
+"237": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "243",
+"parent_id": "229",
+"type": "mutation"
+},
+"238": {
+"next_id": "243",
+"next_id_after": "243",
+"parent_id": "227",
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": "response"
+},
+"239": {
+"next_conditional_id": "243",
+"next_id": "240",
+"next_id_after": "243",
+"type": "condition"
+},
+"24": {
+"next_id": "25",
+"text": "find_kid",
+"type": "title"
+},
+"240": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "242",
+"parent_id": "239",
+"text": "You need a tool for the battery to work...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You need a tool for the battery to work...",
+"type": "dialogue"
+},
+"242": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "243",
+"parent_id": "239",
+"type": "mutation"
+},
+"243": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "get_node",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/GQMVariables/InteractionTimer"
+}])])
+}, {
+"type": "dot"
+}, {
+"function": "stop",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "244",
+"type": "mutation"
+},
+"244": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"246": {
+"next_id": "247",
+"text": "find_flashlight",
+"type": "title"
+},
+"247": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "248",
+"text": "You found a flashlight!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You found a flashlight!",
+"type": "dialogue"
+},
+"248": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "249",
+"text": "Do you want to keep it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you want to keep it?",
+"type": "dialogue"
+},
+"249": {
+"next_id": "250",
+"next_id_after": "255",
+"responses": PackedStringArray("249", "253"),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": "response"
+},
+"25": {
+"character": "Ted",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "26",
+"text": "C-... Can you help me?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "C-... Can you help me?",
+"type": "dialogue"
+},
+"250": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "251",
+"parent_id": "249",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"251": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 4
+}])])
+}])
+},
+"next_id": "252",
+"parent_id": "249",
+"type": "mutation"
+},
+"252": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "disappear",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/City/Flashlight"
+}])])
+}])
+},
+"next_id": "255",
+"parent_id": "249",
+"type": "mutation"
+},
+"253": {
+"next_id": "255",
+"next_id_after": "255",
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": "response"
+},
+"255": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "256",
+"type": "mutation"
+},
+"256": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"26": {
+"character": "Ted",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "27",
+"text": "I can’t find my parents...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I can’t find my parents...",
+"type": "dialogue"
+},
+"27": {
+"character": "You",
+"next_id": "27.2",
+"next_id_after": "49",
+"responses": PackedStringArray("27", "48"),
+"text": "What? What happened?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What? What happened?",
+"type": "response"
+},
+"27.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "28",
+"next_id_after": "49",
+"text": "What? What happened?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What? What happened?",
+"type": "dialogue"
+},
+"28": {
+"character": "Ted",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "29",
+"parent_id": "27",
+"text": "I don't know...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I don't know...",
+"type": "dialogue"
+},
+"29": {
+"character": "Ted",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "30",
+"parent_id": "27",
+"text": "I just miss them a lot.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I just miss them a lot.",
+"type": "dialogue"
+},
+"3": {
+"character": "Tic",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "Time doesn't exist, but Toe does...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Time doesn't exist, but Toe does...",
+"type": "dialogue"
+},
+"30": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "31",
+"parent_id": "27",
+"text": "You must know something...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You must know something...",
+"type": "dialogue"
+},
+"31": {
+"character": "Ted",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "32",
+"parent_id": "27",
+"text": "I just really want my parents back.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I just really want my parents back.",
+"type": "dialogue"
+},
+"32": {
+"character": "Ted",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "33",
+"parent_id": "27",
+"text": "Please help me!!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Please help me!!",
+"type": "dialogue"
+},
+"33": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "34",
+"parent_id": "27",
+"text": "I don't know how to help...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I don't know how to help...",
+"type": "dialogue"
+},
+"34": {
+"character": "Ted",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "35",
+"parent_id": "27",
+"text": "Please, you knew my parents...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Please, you knew my parents...",
+"type": "dialogue"
+},
+"35": {
+"character": "You",
+"next_id": "35.2",
+"next_id_after": "49",
+"parent_id": "27",
+"responses": PackedStringArray("35", "44"),
+"text": "What? Do you know me?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What? Do you know me?",
+"type": "response"
+},
+"35.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "36",
+"next_id_after": "49",
+"text": "What? Do you know me?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What? Do you know me?",
+"type": "dialogue"
+},
+"36": {
+"character": "Ted",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "37",
+"parent_id": "35",
+"text": "I... They are watching...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I... They are watching...",
+"type": "dialogue"
+},
+"37": {
+"character": "You",
+"next_id": "37.2",
+"next_id_after": "49",
+"parent_id": "35",
+"responses": PackedStringArray("37", "40"),
+"text": "What?? Who's watching??",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What?? Who's watching??",
+"type": "response"
+},
+"37.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "38",
+"next_id_after": "49",
+"text": "What?? Who's watching??",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What?? Who's watching??",
+"type": "dialogue"
+},
+"38": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "39",
+"parent_id": "37",
+"type": "mutation"
+},
+"39": {
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "37",
+"type": "goto"
+},
+"4": {
+"character": "Tic",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "5",
+"text": "La La La",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "La La La",
+"type": "dialogue"
+},
+"40": {
+"character": "You",
+"next_id": "40.2",
+"next_id_after": "49",
+"parent_id": "35",
+"text": "WTF??",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "WTF??",
+"type": "response"
+},
+"40.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "41",
+"next_id_after": "49",
+"text": "WTF??",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "WTF??",
+"type": "dialogue"
+},
+"41": {
+"character": "Ted",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "42",
+"parent_id": "40",
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": "dialogue"
+},
+"42": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "43",
+"parent_id": "40",
+"type": "mutation"
+},
+"43": {
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "40",
+"type": "goto"
+},
+"44": {
+"character": "You",
+"next_id": "44.2",
+"next_id_after": "49",
+"parent_id": "27",
+"text": "Ahm... Sorry, I don't know your parents...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahm... Sorry, I don't know your parents...",
+"type": "response"
+},
+"44.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "45",
+"next_id_after": "49",
+"text": "Ahm... Sorry, I don't know your parents...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahm... Sorry, I don't know your parents...",
+"type": "dialogue"
+},
+"45": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "46",
+"parent_id": "44",
+"type": "mutation"
+},
+"46": {
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "44",
+"type": "goto"
+},
+"48": {
+"character": "You",
+"next_id": "48.2",
+"next_id_after": "49",
+"text": "What? No, sorry.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What? No, sorry.",
+"type": "response"
+},
+"48.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "49",
+"next_id_after": "49",
+"text": "What? No, sorry.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What? No, sorry.",
+"type": "dialogue"
+},
+"49": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "50",
+"type": "mutation"
+},
+"5": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "6",
+"type": "mutation"
+},
+"50": {
+"is_snippet": false,
+"next_id": "end!",
+"type": "goto"
+},
+"54": {
+"next_id": "55",
+"text": "find_lady",
+"type": "title"
+},
+"55": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "56",
+"text": "Hello!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hello!",
+"type": "dialogue"
+},
+"56": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "57",
+"text": "It's so good to see you again, neighbor.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's so good to see you again, neighbor.",
+"type": "dialogue"
+},
+"57": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "58",
+"text": "How are you?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "How are you?",
+"type": "dialogue"
+},
+"58": {
+"character": "You",
+"next_id": "58.2",
+"next_id_after": "154",
+"responses": PackedStringArray("58", "93"),
+"text": "Hello... Sorry, I don't remember who you are...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hello... Sorry, I don't remember who you are...",
+"type": "response"
+},
+"58.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "59",
+"next_id_after": "154",
+"text": "Hello... Sorry, I don't remember who you are...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hello... Sorry, I don't remember who you are...",
+"type": "dialogue"
+},
+"59": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "60",
+"parent_id": "58",
+"text": "Oh...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh...",
+"type": "dialogue"
+},
+"6": {
+"is_snippet": false,
+"next_id": "end!",
+"type": "goto"
+},
+"60": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "61",
+"parent_id": "58",
+"text": "I understand.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I understand.",
+"type": "dialogue"
+},
+"61": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "62",
+"parent_id": "58",
+"text": "It's been a whiile, after everything...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's been a whiile, after everything...",
+"type": "dialogue"
+},
+"62": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "63",
+"parent_id": "58",
+"text": "I'm so sorry...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm so sorry...",
+"type": "dialogue"
+},
+"63": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "64",
+"parent_id": "58",
+"text": "After... What?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "After... What?",
+"type": "dialogue"
+},
+"64": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "65",
+"parent_id": "58",
+"text": "What happened?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What happened?",
+"type": "dialogue"
+},
+"65": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "66",
+"parent_id": "58",
+"text": "Oh dear...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh dear...",
+"type": "dialogue"
+},
+"66": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "67",
+"parent_id": "58",
+"text": "You are the only one who truly knows...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You are the only one who truly knows...",
+"type": "dialogue"
+},
+"67": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "68",
+"parent_id": "58",
+"text": "But I have something for you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "But I have something for you.",
+"type": "dialogue"
+},
+"68": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "69",
+"parent_id": "58",
+"text": "What is it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What is it?",
+"type": "dialogue"
+},
+"69": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "70",
+"parent_id": "58",
+"text": "I kept your house keys, just like you asked.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I kept your house keys, just like you asked.",
+"type": "dialogue"
+},
+"70": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "71",
+"parent_id": "58",
+"text": "Here!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Here!",
+"type": "dialogue"
+},
+"71": {
+"character": "You",
+"next_id": "71.2",
+"next_id_after": "154",
+"parent_id": "58",
+"responses": PackedStringArray("71", "89"),
+"text": "Thank you!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thank you!",
+"type": "response"
+},
+"71.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "72",
+"next_id_after": "154",
+"text": "Thank you!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thank you!",
+"type": "dialogue"
+},
+"72": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "inventory_full"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "83",
+"next_id": "73",
+"next_id_after": "85",
+"parent_id": "71",
+"type": "condition"
+},
+"73": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "74",
+"parent_id": "72",
+"text": "Your inventory is full, select item to trade:",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your inventory is full, select item to trade:",
+"type": "dialogue"
+},
+"74": {
+"next_id": "75",
+"next_id_after": "85",
+"parent_id": "72",
+"responses": PackedStringArray("74", "77", "80"),
+"text": "Item 1",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 1",
+"type": "response"
+},
+"75": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 0
+}])])
+}])
+},
+"next_id": "76",
+"parent_id": "74",
+"type": "mutation"
+},
+"76": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "85",
+"parent_id": "74",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"77": {
+"next_id": "78",
+"next_id_after": "85",
+"parent_id": "72",
+"text": "Item 2",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 2",
+"type": "response"
+},
+"78": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 1
+}])])
+}])
+},
+"next_id": "79",
+"parent_id": "77",
+"type": "mutation"
+},
+"79": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "85",
+"parent_id": "77",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"8": {
+"next_id": "9",
+"text": "find_tac",
+"type": "title"
+},
+"80": {
+"next_id": "81",
+"next_id_after": "85",
+"parent_id": "72",
+"text": "Item 3",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 3",
+"type": "response"
+},
+"81": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 2
+}])])
+}])
+},
+"next_id": "82",
+"parent_id": "80",
+"type": "mutation"
+},
+"82": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "85",
+"parent_id": "80",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"83": {
+"next_conditional_id": "85",
+"next_id": "84",
+"next_id_after": "85",
+"parent_id": "71",
+"type": "condition"
+},
+"84": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": -1
+}])])
+}])
+},
+"next_id": "85",
+"parent_id": "83",
+"type": "mutation"
+},
+"85": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "key_state"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "86",
+"parent_id": "71",
+"type": "mutation"
+},
+"86": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"function": "unlock_door",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "87",
+"parent_id": "71",
+"type": "mutation"
+},
+"87": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "88",
+"parent_id": "71",
+"type": "mutation"
+},
+"88": {
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "71",
+"type": "goto"
+},
+"89": {
+"character": "You",
+"next_id": "89.2",
+"next_id_after": "154",
+"parent_id": "58",
+"text": "I don't want them.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I don't want them.",
+"type": "response"
+},
+"89.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"next_id_after": "154",
+"text": "I don't want them.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I don't want them.",
+"type": "dialogue"
+},
+"9": {
+"character": "Tac",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "10",
+"text": "Is it when? Or how? Or what?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Is it when? Or how? Or what?",
+"type": "dialogue"
+},
+"90": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"function": "unlock_door",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "91",
+"parent_id": "89",
+"type": "mutation"
+},
+"91": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "92",
+"parent_id": "89",
+"type": "mutation"
+},
+"92": {
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "89",
+"type": "goto"
+},
+"93": {
+"character": "You",
+"next_id": "93.2",
+"next_id_after": "154",
+"text": "Oh hello! I'm good and you?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh hello! I'm good and you?",
+"type": "response"
+},
+"93.2": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "94",
+"next_id_after": "154",
+"text": "Oh hello! I'm good and you?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh hello! I'm good and you?",
+"type": "dialogue"
+},
+"94": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "95",
+"parent_id": "93",
+"text": "I'm better, my knee doesn't hurt anymore.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm better, my knee doesn't hurt anymore.",
+"type": "dialogue"
+},
+"95": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "96",
+"parent_id": "93",
+"text": "Thank you for asking!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thank you for asking!",
+"type": "dialogue"
+},
+"96": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "97",
+"parent_id": "93",
+"text": "That's good!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That's good!",
+"type": "dialogue"
+},
+"97": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "98",
+"parent_id": "93",
+"text": "Ahm...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahm...",
+"type": "dialogue"
+},
+"98": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "99",
+"parent_id": "93",
+"text": "Can you tell me where's my house?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Can you tell me where's my house?",
+"type": "dialogue"
+},
+"99": {
+"character": "Dorothy",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "100",
+"parent_id": "93",
+"text": "You don't remember?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You don't remember?",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.15.3"

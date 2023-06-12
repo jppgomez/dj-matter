@@ -1,0 +1,350 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_m50us"]
+
+[resource]
+script = ExtResource("1_m50us")
+titles = {
+"final": "2",
+"find_key": "9"
+}
+character_names = PackedStringArray("You?", "God")
+first_title = "2"
+lines = {
+"1": {
+"next_id": "2",
+"text": "final",
+"type": "title"
+},
+"10": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "inventory_full"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "21",
+"next_id": "11",
+"next_id_after": "24",
+"type": "condition"
+},
+"11": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "12",
+"parent_id": "10",
+"text": "Your inventory is full, select item to trade:",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your inventory is full, select item to trade:",
+"type": "dialogue"
+},
+"12": {
+"next_id": "13",
+"next_id_after": "24",
+"parent_id": "10",
+"responses": PackedStringArray("12", "15", "18"),
+"text": "Item 1",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 1",
+"type": "response"
+},
+"13": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 0
+}])])
+}])
+},
+"next_id": "14",
+"parent_id": "12",
+"type": "mutation"
+},
+"14": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "24",
+"parent_id": "12",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"15": {
+"next_id": "16",
+"next_id_after": "24",
+"parent_id": "10",
+"text": "Item 2",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 2",
+"type": "response"
+},
+"16": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 1
+}])])
+}])
+},
+"next_id": "17",
+"parent_id": "15",
+"type": "mutation"
+},
+"17": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "24",
+"parent_id": "15",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"18": {
+"next_id": "19",
+"next_id_after": "24",
+"parent_id": "10",
+"text": "Item 3",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Item 3",
+"type": "response"
+},
+"19": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": 2
+}])])
+}])
+},
+"next_id": "20",
+"parent_id": "18",
+"type": "mutation"
+},
+"2": {
+"character": "You?",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "3",
+"text": "So...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So...",
+"type": "dialogue"
+},
+"20": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "24",
+"parent_id": "18",
+"text": "Added to Inventory",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Added to Inventory",
+"type": "dialogue"
+},
+"21": {
+"next_conditional_id": "24",
+"next_id": "22",
+"next_id_after": "24",
+"type": "condition"
+},
+"22": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "PlayerInventory"
+}, {
+"type": "dot"
+}, {
+"function": "add_item",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "item_name"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "item_desc"
+}]), Array[Dictionary]([{
+"type": "number",
+"value": -1
+}])])
+}])
+},
+"next_id": "24",
+"parent_id": "21",
+"type": "mutation"
+},
+"24": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "disappear",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "/root/House/Keys"
+}])])
+}])
+},
+"next_id": "26",
+"type": "mutation"
+},
+"26": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "key_state"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "27",
+"type": "mutation"
+},
+"27": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "28",
+"type": "mutation"
+},
+"28": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "You?",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "What do YOU think it's happening?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What do YOU think it's happening?",
+"type": "dialogue"
+},
+"4": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "talking"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "5",
+"type": "mutation"
+},
+"5": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "SceneTransition"
+}, {
+"type": "dot"
+}, {
+"function": "change_scene",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "res://levels/the_end/the_end.tscn"
+}])])
+}])
+},
+"next_id": "6",
+"type": "mutation"
+},
+"6": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"8": {
+"next_id": "9",
+"text": "find_key",
+"type": "title"
+},
+"9": {
+"character": "God",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "10",
+"text": "You found a set of keys!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You found a set of keys!",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.15.3"
